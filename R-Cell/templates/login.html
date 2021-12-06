@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--ADAPTED FROM TEMPLATE at https://getbootstrap.com/docs/4.0/components/card/-->
+
+<html lang="en">
+
+  <head>
+    <title>R-Cell - Login</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.ico') }}">
+  </head>
+
+  <body>
+    <div >
+      <div>
+        <div>Login</div>
+        <div>
+
+          {% include 'includes/_messages.html' %}
+          <form action="" method="POST">
+            <div>
+              <div>
+                <input type="text" id="inputUsername" name="username" placeholder="Username" required="required" autofocus="autofocus" value={{request.form.username}}>
+                <label for="inputUsername">Username</label>
+              </div>
+            </div>
+            <div >
+              <div>
+                <input type="password" id="inputPassword" name="password" placeholder="Password" required="required" autofocus="autofocus" value={{request.form.password}}>
+                <label for="inputPassword">Password</label>
+              </div>
+            </div>
+            <button type="submit">Login</button>
+          </form>
+
+
+          <div>
+            <a href="register">Don't have an account? Register now.</a>
+            <a href="/">Home Page</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+
+</html>
